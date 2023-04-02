@@ -1,7 +1,6 @@
 // jQuery
 
 //1. Adding a new item to the list:
-
 function newItem() {
     let li = $('<li></li>');
     let inputValue = $('#input').val();
@@ -11,6 +10,8 @@ function newItem() {
     } else {
         li.append(inputValue);
         $('#list').append(li);
+        //5. Clear and re-focus input
+        $('#input').val('').focus();
     }
     
     //2. Crossing an item out:
